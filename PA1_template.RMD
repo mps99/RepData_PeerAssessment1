@@ -1,3 +1,10 @@
+---
+output:
+  html_document:
+    fig_caption: yes
+    keep_md: yes
+    toc: yes
+---
 # Reproducible Research: Peer assessment 1
 ### *Madhavi Pullela*
 ### *3/8/2015*
@@ -49,6 +56,8 @@ mean(activityData.steps$steps)
 ```{r}
 median(activityData.steps$steps)
 ```
+Mean and median values are higher after imputing missing data. The reason is that in the original data, there are some days with  steps  values  NA  for any  interval . The total number of steps taken in such days are set to 0s by default. However, after replacing missing  steps  values with the mean  steps  of associated  interval  value, these 0 values are removed from the histogram of total number of steps taken each day.
+
 
 ```{r}
 desc <- summary(activityData.steps) #from the psych library
@@ -66,6 +75,9 @@ ggplot(data=activityData.averages, aes(x=interval, y=steps)) + geom_line() + xla
 activityData.averages[which.max(activityData.averages$steps),]
 ```
 ## Imputing missing values
+
+There are many days/intervals where there are missing values (coded as  NA ). The presence of missing days may introduce bias into some calculations or summaries of the data.
+
 ```{r}
 activityData.missing <- is.na(activityData$steps)
 num.missing <- sum(activityData.missing)
@@ -87,6 +99,8 @@ head(filled.activityData)
 ```
 
 ## For visualization with the filled in data set, we make a histogram.
+First, let's find the day of the week for each measurement in the dataset. In this part, we use the dataset with the filled-in values.
+Now, let's make a panel plot containing plots of average number of steps taken on weekdays and weekends.
 
 ```{r}
 imputedData <- tapply(filled.activityData$steps, filled.activityData$date)
