@@ -23,7 +23,7 @@ print(actDataNotProcessed, include.rownames = TRUE, caption.placement="top")
 
 ```
 ## % latex table generated in R 3.1.2 by xtable 1.7-4 package
-## % Sat Mar 14 20:16:01 2015
+## % Sun Mar 15 00:16:55 2015
 ## \begin{table}[ht]
 ## \centering
 ## \caption{First 5 rows: non-processed} 
@@ -54,7 +54,7 @@ print(actDataProcessed, include.rownames = TRUE, caption.placement="top")
 
 ```
 ## % latex table generated in R 3.1.2 by xtable 1.7-4 package
-## % Sat Mar 14 20:16:01 2015
+## % Sun Mar 15 00:16:55 2015
 ## \begin{table}[ht]
 ## \centering
 ## \caption{First 5 rows: processed} 
@@ -126,7 +126,7 @@ print(desc, include.rownames = TRUE, caption.placement="top")
 
 ```
 ## % latex table generated in R 3.1.2 by xtable 1.7-4 package
-## % Sat Mar 14 20:16:02 2015
+## % Sun Mar 15 00:16:55 2015
 ## \begin{table}[ht]
 ## \centering
 ## \caption{Summary Statistics for Data} 
@@ -155,7 +155,7 @@ print(desc, include.rownames = TRUE, caption.placement="top")
 
 ```
 ## % latex table generated in R 3.1.2 by xtable 1.7-4 package
-## % Sat Mar 14 20:16:02 2015
+## % Sun Mar 15 00:16:55 2015
 ## \begin{table}[ht]
 ## \centering
 ## \caption{Summary Statistics for Data} 
